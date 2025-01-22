@@ -1,0 +1,33 @@
+strategie per estrarre informazioni da un pdf:
+
+CATEGORIZZAZIONE TESTO TROVATO:
+
+il font più utilizzato e la dimensione media più utilizzata contraddistinguono i PARAGRAFI
+si potrebbero cercare delle parole chiave all'interno dei paragrafi
+
+il font più grande e utilizzato una sola volta, 
+posizionato nella parte superiore del pdf è quasi sempre il TITOLO, o il NOME
+
+il secondo font e dimensione più utilizzati sono dati ai TITOLI DEI PARAGRAFI,
+potrebbero avere colori accesi
+
+la parte del testo che sembra staccata dal resto a formare un piccolo rettangolo è sicuramente la parte CONTATTI,
+dovrebbe avere un font e dimensione propria uguale per tutti i caratteri
+dovrebbe contenere il carattere @ e ., inoltre molti caratteri dovrebbero essere numeri
+
+
+TECNICHE DI ESTRAZIONE:
+
+presenza/assenza del consenso al trattamento dei dati personali tramite confronto con stringa aggiornata
+
+divisione in blocchi costituiti da un cambio di font/dimensione testo
+
+salvataggio informazioni sul blocco selezionato
+
+confronto con dati medi calcolati in precedenza sul totale dei pdf in possesso
+
+associazione categoria in base a confronto con dati medi
+
+creazione liste con categorie come colonne e contenuto delle stesse come righe 
+
+creazione file titles.csv, paragraphs.csv, ecc.
