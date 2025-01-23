@@ -31,3 +31,13 @@ associazione categoria in base a confronto con dati medi
 creazione liste con categorie come colonne e contenuto delle stesse come righe 
 
 creazione file titles.csv, paragraphs.csv, ecc.
+
+RISULTATO FINALE
+
+una lista detta cv che contiene un curriculum e tutte le sue informazioni per elemento
+
+
+GESTIONE ERRORI
+
+integrare gestione errori
+usare pydantic
