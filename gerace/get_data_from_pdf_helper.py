@@ -1,4 +1,4 @@
-from models import CV, CV_Paragraphs, CV_Data
+from models import CV, CV_Data
 
 def update_avg(cv, cv_data):
 	avg = cv.average_values
@@ -15,6 +15,13 @@ def reinitialize_cv_data(cv_data):
 	cv_data.char_num = 0
 	cv_data.words_num = 0
 	return cv_data
+
+
+def reinitialize_cv(cv):
+	new_cv = CV()
+	# cv.words_num = 0
+	# cv.font_size_used = []
+	return new_cv
 	
 
 def update_cv_data(cv_data, span):
@@ -31,12 +38,12 @@ def update_cv_data(cv_data, span):
  
 
 def add_node(cv:CV, cv_data:CV_Data):
-	nodo = CV_Paragraphs(cv_data.text, cv_data.char_num, cv_data.words_num, cv_data.font_size, cv_data.font_color, cv_data.position_x_start, cv_data.position_x_finish, cv_data.position_y_start, cv_data.position_y_finish)
+	nodo = CV_Data(cv_data.text, cv_data.char_num, cv_data.words_num, cv_data.font_size, cv_data.font_color, cv_data.position_x_start, cv_data.position_x_finish, cv_data.position_y_start, cv_data.position_y_finish)
 	cv.append(nodo)
     
 
 def update_cv(cv:CV, cv_data:CV_Data):
 	cv.words_num += cv_data.words_num
-	cv.font_size_used[cv_data.font_size] += 1
+	cv.font_size_used.append(cv_data.font_size)
 	cv.font_color_used[cv_data.font_color] += 1
 	return cv

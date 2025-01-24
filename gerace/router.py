@@ -1,6 +1,6 @@
 from infer import infer_categories, infer_attributes
 
-
+# with more time i want to divide all the pdf files into macro categories to infer the data more properly and to create a final table with all the pdfs
 def cv_router(cv):
 	# condition:bool = False
 
